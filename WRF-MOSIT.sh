@@ -120,7 +120,7 @@ if [ "$SYSTEMOS" = "Linux" ]; then
   export HOME=`cd;pwd`
   export Storage_Space_Size=$(df -h --output=avail ${HOME} | awk 'NR==2 {print $1}' | tr -cd '[:digit:]')
   export Storage_Space_Units=$(df -h --output=avail ${HOME} | awk 'NR==2 {print $1}' | tr -cd '[:alpha:]')
-  export Storage_Space_Required="350"
+  export Storage_Space_Required="150"
   echo "-------------------------------------------------- "
   echo " "
   echo " Testing for Storage Space for installation"
@@ -139,7 +139,7 @@ if [ "$SYSTEMOS" = "Linux" ]; then
       [Gg]* )
         if [[ ${Storage_Space_Size} -lt ${Storage_Space_Required} ]]; then
           echo " "
-          echo "Not enough storage space for installation. 350GB is required for installation."
+          echo "Not enough storage space for installation. 150GB is required for installation."
           echo "-------------------------------------------------- "
           exit
         else
@@ -149,12 +149,12 @@ if [ "$SYSTEMOS" = "Linux" ]; then
         fi ;;
       [MmKk]* )
         echo " "
-        echo "Not enough storage space for installation. 350GB is required for installation."
+        echo "Not enough storage space for installation. 150GB is required for installation."
         echo "-------------------------------------------------- "
         exit ;;
       * )
       echo " "
-      echo "Not enough storage space for installation. 350GB is required for installation."
+      echo "Not enough storage space for installation. 150GB is required for installation."
       echo "-------------------------------------------------- "
       exit ;;
     esac
@@ -165,7 +165,7 @@ fi
 if [ "$SYSTEMOS" = "MacOS" ]; then
   export Storage_Space_Size=$(df -h / | awk 'NR==2 {print $2}' | tr -cd '[:digit:]')
   export Storage_Space_Units=$(df -h / | awk 'NR==2 {print $2}' | tr -cd '[:alpha:]')
-  export Storage_Space_Required="350"
+  export Storage_Space_Required="150"
   echo "-------------------------------------------------- "
   echo " "
   echo " Testing for Storage Space for installation"
@@ -184,7 +184,7 @@ if [ "$SYSTEMOS" = "MacOS" ]; then
       [Gi]* )
         if [[ ${Storage_Space_Size} -lt ${Storage_Space_Required} ]]; then
           echo " "
-          echo "Not enough storage space for installation. 350GB is required for installation."
+          echo "Not enough storage space for installation. 150GB is required for installation."
           echo "-------------------------------------------------- "
           exit
         else
@@ -194,12 +194,12 @@ if [ "$SYSTEMOS" = "MacOS" ]; then
         fi ;;
       [MiKi]* )
         echo " "
-        echo "Not enough storage space for installation. 350GB is required for installation."
+        echo "Not enough storage space for installation. 150GB is required for installation."
         echo "-------------------------------------------------- "
         exit ;;
       * )
       echo " "
-      echo "Not enough storage space for installation. 350GB is required for installation."
+      echo "Not enough storage space for installation. 150GB is required for installation."
       echo "-------------------------------------------------- "
       exit ;;
     esac
