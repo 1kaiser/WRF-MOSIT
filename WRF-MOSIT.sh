@@ -1604,7 +1604,7 @@ if [ "$macos_64bit_GNU" = "1" ] && [ "$WRFHYDRO_STANDALONE_PICK" = "1" ]; then
     wget -c https://download.sourceforge.net/libpng/libpng-1.6.39.tar.gz
     wget -c https://www.ece.uvic.ca/~frodo/jasper/software/jasper-1.900.1.zip
     wget -c https://github.com/pmodels/mpich/releases/download/v4.1.2/mpich-4.1.2.tar.gz
-    wget -c  https://parallel-netcdf.github.io/Release/pnetcdf-1.12.3.tar.gz
+    wget -c https://parallel-netcdf.github.io/Release/pnetcdf-1.12.3.tar.gz
     wget -c https://sourceforge.net/projects/opengrads/files/grads2/2.2.1.oga.1/Linux%20%2864%20Bits%29/opengrads-2.2.1.oga.1-bundle-x86_64-pc-linux-gnu-glibc_2.17.tar.gz
 
 
