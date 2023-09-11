@@ -13,9 +13,36 @@ This is a BASH script that provides options to install the following Weather Res
     - Linux Debian Distro (Ubuntu, Mint, etc)
     - Windows Subsystem for Linux (Debian Distro, Ubuntu, Mint, etc)
     - CentOS based systems not supported
-- 350 Gigabyte (GB) of storage space
+- 150 Gigabyte (GB) of storage space
 
 ---
+### Installation
+- (Make sure to download folder into your Home Directory): $HOME
+```
+> cd $HOME
+
+> git clone https://github.com/1kaiser/WRF-MOSIT.git
+
+> cd $HOME/WRF-MOSIT
+
+> chmod 775 *.sh
+>
+> ./WRF-MOSIT.sh | tee WRF.MOSIT.log
+```
+- Script will check for System Architecture Type and Storage Space requirements.
+
+- Once running the script users will be provided with options to select how the WRF_Master_Script will compile and install the various packages.
+    - First option, Which compiler users want to use Intel or GNU compilers.
+         - Please note that Hurricane WRF (HWRF) can only use Intel Compilers
+    - Second option, Which graphic display package should be installed.  GrADS or OpenGrADS
+    - Third option, Auto Configuration.  This allows users to have a one-click install
+    - Fourth option, Secondary WPS geography file download choice.
+      - Author of script reccomends selecting "YES" if user is unsure.
+    - Fifth option, Optional WPS geography file download cohice.
+      - Author of script reccomends selecting "YES" if user is unsure.
+    - Last option, Pick which WRF software user wants to install
+
+
 ### Libraries Installed (Latest libraries as of 01/01/2023)
 - Libraries are manually installed in sub-folders utilizing either Intel or GNU Compilers.
     - Libraries installed with GNU compilers
@@ -120,31 +147,6 @@ This is a BASH script that provides options to install the following Weather Res
     - Development Testbed Center (DTC) Enhanced Model Evaluation Tools (METplus) v5.0.2
     - Development Testbed Center (DTC) Unified Post Processor (UPP) v4.1
 ---
-### Installation
-- (Make sure to download folder into your Home Directory): $HOME
-
-> cd $HOME
-
-> git clone https://github.com/HathewayWill/WRF-MOSIT.git
-
-> cd $HOME/WRF-MOSIT
-
-> chmod 775 *.sh
->
-> ./WRF-MOSIT.sh | tee WRF.MOSIT.log
-
-- Script will check for System Architecture Type and Storage Space requirements.
-
-- Once running the script users will be provided with options to select how the WRF_Master_Script will compile and install the various packages.
-    - First option, Which compiler users want to use Intel or GNU compilers.
-         - Please note that Hurricane WRF (HWRF) can only use Intel Compilers
-    - Second option, Which graphic display package should be installed.  GrADS or OpenGrADS
-    - Third option, Auto Configuration.  This allows users to have a one-click install
-    - Fourth option, Secondary WPS geography file download choice.
-      - Author of script reccomends selecting "YES" if user is unsure.
-    - Fifth option, Optional WPS geography file download cohice.
-      - Author of script reccomends selecting "YES" if user is unsure.
-    - Last option, Pick which WRF software user wants to install
 
 
 ---
