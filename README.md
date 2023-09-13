@@ -17,6 +17,54 @@ This is a BASH script that provides options to install the following Weather Res
 
 ---
 ### Installation
+## WRF-Install-Script using BASH
+
+
+<table>
+<thead>
+<tr>
+<td>
+WRF Install scripts will install the WRF and WPS with the needed libraries(netcdf4 hdf5, mpich, zlib, libpng, jasper). You can choose the version that you want to install. These scripts are written for Debian and Ubuntu based Linux operating systems, such as Ubuntu, Debian, Linux Mint, Pardus, etc.
+
+Since WRF-Install-Script uses operating system libraries, it installs much faster than manually installing the libraries and then installing the WRF model.
+
+You can download each version from the [releases](https://github.com/bakamotokatas/WRF-Install-Script/releases).
+
+Currently only WRF4.5.1_Install.bash, WRF4.5_Install.bash, WRF4.4.2_Install.bash, WRF4.4.1_Install.bash, WRF4.4_Install.bash and WRF4.3.3_Install.bash support Ubuntu 22.04. Therefore if you are using Ubuntu 22.04, please use WRF4.5.1_Install.bash, WRF4.5_Install.bash, WRF4.4.2_Install.bash, WRF4.4.1_Install.bash, WRF4.4_Install.bash and WRF4.3.3_Install.bash, otherwise it will fail to build. All other releases will be updated soon to support Ubuntu 22.04.
+
+To run the scripts, you should run the commands below.
+
+For WRF4.5.1 with ARW option(default)
+
+```
+bash WRF4.5.1_Install.bash
+```
+or
+```
+bash WRF4.5.1_Install.bash -arw
+```
+
+For WRF4.5.1 with Chem option (WRF-Chem)
+```
+bash WRF4.5.1_Install.bash -chem
+```
+
+For WRF4.5.1 with Hydro option (WRF-Hydro)
+```
+bash WRF4.5.1_Install.bash -hydro
+```
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## 2nd script **OR**
+
+<table>
+<thead>
+<tr>
+<td>
 - (Make sure to download folder into your Home Directory): $HOME
 ```
 > cd $HOME
@@ -41,9 +89,14 @@ This is a BASH script that provides options to install the following Weather Res
     - Fifth option, Optional WPS geography file download cohice.
       - Author of script reccomends selecting "YES" if user is unsure.
     - Last option, Pick which WRF software user wants to install
-
+```
+</td>
+</tr>
+</tbody>
+</table>
 
 ### Libraries Installed (Latest libraries as of 01/01/2023)
+
 - Libraries are manually installed in sub-folders utilizing either Intel or GNU Compilers.
     - Libraries installed with GNU compilers
         - zlib (1.2.13)
