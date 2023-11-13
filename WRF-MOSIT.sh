@@ -120,7 +120,7 @@ if [ "$SYSTEMOS" = "Linux" ]; then
   export HOME=`cd;pwd`
   export Storage_Space_Size=$(df -h --output=avail ${HOME} | awk 'NR==2 {print $1}' | tr -cd '[:digit:]')
   export Storage_Space_Units=$(df -h --output=avail ${HOME} | awk 'NR==2 {print $1}' | tr -cd '[:alpha:]')
-  export Storage_Space_Required="150"
+  export Storage_Space_Required="70"
   echo "-------------------------------------------------- "
   echo " "
   echo " Testing for Storage Space for installation"
@@ -165,7 +165,7 @@ fi
 if [ "$SYSTEMOS" = "MacOS" ]; then
   export Storage_Space_Size=$(df -h / | awk 'NR==2 {print $2}' | tr -cd '[:digit:]')
   export Storage_Space_Units=$(df -h / | awk 'NR==2 {print $2}' | tr -cd '[:alpha:]')
-  export Storage_Space_Required="150"
+  export Storage_Space_Required="70"
   echo "-------------------------------------------------- "
   echo " "
   echo " Testing for Storage Space for installation"
