@@ -295,14 +295,7 @@ echo " "
 
 while true; do
   echo "-------------------------------------------------- "
-  echo " "
-  echo "Would you like to download the WPS Geographical Input Data for Specific Applications? (Optional)"
-  echo " "
-  echo "Specific Applicaitons files can be viewed here:  "
-  echo " "
-  printf '\e]8;;https://www2.mmm.ucar.edu/wrf/users/download/get_sources_wps_geog.html\e\\Specific GEOG Applications Website (right click to open link) \e]8;;\e\\\n'
-  echo " "
-  read -r -p "(Y/N)   " yn
+  read -r -p "Would you like to download the WPS Geographical Input Data for Specific Applications? (Optional) (Y/N)   " yn
   case $yn in
     [Yy]* )
       export WPS_Specific_Applications=1  #variable set for "YES" for specific application data
@@ -322,15 +315,8 @@ echo " "
 
 while true; do
     echo "-------------------------------------------------- "
-    echo " "
-    echo "Would you like to download the GEOG Optional WPS Geographical Input Data? (Optional)"
-    echo " "
-    echo "Optional Geogrpahical files can be viewed here:  "
-    echo " "
-    printf '\e]8;;https://www2.mmm.ucar.edu/wrf/users/download/get_sources_wps_geog.html\e\\Optional GEOG File Applications Website (right click to open link) \e]8;;\e\\\n'
-    echo " "
-    read -r -p "(Y/N)    " yn
-    echo " "
+
+    read -r -p "Would you like to download the GEOG Optional WPS Geographical Input Data? (Optional (Y/N)    " yn
   case $yn in
     [Yy]* )
       export Optional_GEOG=1  #variable set for "YES" for Optional GEOG Data
